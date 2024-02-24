@@ -10,9 +10,44 @@ public class Customer extends People implements IOperationCustomer {
         super(bankName, address, contact, clients, loans, savingsAccount, currentsAccount, debitsCard, name, lastName, ID, address1, contact1);
     }
 
-    @Override
+
     public void performCustomerOperation() {
         // Implementa la lógica específica para operaciones de cliente
         System.out.println("Performing customer operation");
+    }
+
+    @Override
+    public String getFullName() {
+        return null;
+    }
+
+    @Override
+    public void makeSavingDeposits() {
+
+    }
+
+    @Override
+    public void makeSavingsWithdrawals() {
+
+    }
+
+    @Override
+    public void makeCurrentWithdrawals() {
+
+    }
+
+    @Override
+    public void makeCreditCardPayments() {
+
+    }
+
+    @Override
+    public void requestLoan() {
+
+    }
+
+    @Override
+    public void makeLoanPayments() {
+
     }
 }

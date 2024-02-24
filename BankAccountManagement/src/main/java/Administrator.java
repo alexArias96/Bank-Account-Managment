@@ -10,7 +10,6 @@ public class Administrator extends People {
         super(bankName, address, contact, clients, loans, savingsAccount, currentsAccount, debitsCard, name, lastName, ID, address1, contact1);
     }
 
-    @Override
     public void performAdministratorOperation() {
         // Implementa la lógica específica para operaciones de administrador
         System.out.println("Performing administrator operation");

@@ -1,5 +1,3 @@
-package org.example;
-
 public class CreditCard {
     // Atributos
     private double creditCardConsumption;
