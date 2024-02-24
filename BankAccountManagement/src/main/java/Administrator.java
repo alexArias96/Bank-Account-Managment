@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Administrator extends People implements IOperationAdministrator {
+public class Administrator extends People {
     // Constructor
     public Administrator(String bankName, String address, String contact,
                          ArrayList<Customer> clients, ArrayList<Loan> loans,
