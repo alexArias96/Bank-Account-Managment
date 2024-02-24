@@ -9,8 +9,8 @@ public class People extends Bank{
 
     // Constructors
 
-    public People(String bankName, String address, String contact, ArrayList<Customer> clients, ArrayList<Loan> loans, ArrayList<SavingsAccount> savingsAccount, ArrayList<CurrentAccount> currentAccount, ArrayList<DebitCard> debitsCard, ArrayList<CurrentCard> currentsCard, String name, String lastName, String ID, String address1, String contact1) {
-        super(bankName, address, contact, clients, loans, savingsAccount, currentAccount, debitsCard, currentsCard);
+    public People(String bankName, String address, String contact, ArrayList<Customer> clients, ArrayList<Loan> loans, ArrayList<SavingsAccount> savingsAccount, ArrayList<CurrentAccount> currentAccount, ArrayList<DebitCard> debitsCard, String name, String lastName, String ID, String address1, String contact1) {
+        super(bankName, address, contact, clients, loans, savingsAccount, currentAccount, debitsCard);
         this.name = name;
         this.lastName = lastName;
         this.ID = ID;
