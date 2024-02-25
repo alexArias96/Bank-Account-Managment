@@ -43,16 +43,16 @@ public class BankAccountManagement {
             System.out.println("7.- Solicitar tarjeta de credito");
             System.out.println("8.- Realizar pago de tarjeta de credito");
             System.out.println("0.- Salir\n");
-            System.out.println("Ingrese el numero de la opcion que desea  obtener:");
+            System.out.println("Ingrese el numero de la opcion a solicitar:");
             option = entrada.nextInt();
             if(option ==0 ){
 
                 System.out.println("\nGracias, hasta luego !!!!!");
-            } else if (option>0 && option<8){
+            } else if (option>0 && option<9){
                 Menu.action(option);
             }else {
-                System.out.println("\t\t ERRO!!!!!!");
-                System.out.println("Ingrese un numero entre 1 al 7");
+                System.out.println("\t\t ERROR!!!!!!");
+                System.out.println("Ingrese un numero entre 1 al 8");
             }
 
         } while(option !=0);
