@@ -40,6 +40,7 @@ public class BankAccountManagement {
             System.out.println("5.- Solicitar prestamo");
             System.out.println("6.- Realizar pago de prestamo");
             System.out.println("7.- Solicitar tarjeta de credito");
+            System.out.println("8.- Realizar pago de tarjeta de credito");
             System.out.println("0.- Salir");
 
                 option = entrada.nextInt();
