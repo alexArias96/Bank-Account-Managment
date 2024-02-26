@@ -33,9 +33,9 @@ public class Menu {
                 optionMenu = entrada.nextInt();
                 System.out.println("Ingrese la cantidad a retirar:\n");
                 remove = entrada.nextDouble();
-                if (remove > 0.0 ){
-                    System.out.println("retiro");
-                }
+
+                Withdrawal withdrawal = new Withdrawal();
+                withdrawal.getWithdrawal(remove);
                 break;
             case 5:
                 System.out.println("Solicitar Prestamo:\n");

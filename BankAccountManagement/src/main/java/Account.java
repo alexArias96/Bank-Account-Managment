@@ -6,17 +6,19 @@ public class Account {
     private String creditCard;
     private Double balance;
     private String holder;
+    private Double Amount;
 
     public Account() {
     }
 
-    public Account(int accountType, String accountNumber, String debitCard, String creditCard, Double balance, String holder) {
+    public Account(int accountType, String accountNumber, String debitCard, String creditCard, Double balance, String holder, Double amount) {
         this.accountType = accountType;
         this.accountNumber = accountNumber;
         this.debitCard = debitCard;
         this.creditCard = creditCard;
         this.balance = balance;
         this.holder = holder;
+        this.Amount = amount;
     }
 
     public int getAccountType() {
@@ -67,5 +69,12 @@ public class Account {
         this.holder = holder;
     }
 
+    public Double getAmount() {
+        return Amount;
+    }
+
+    public void setAmount(Double amount) {
+        Amount = amount;
+    }
 
 }
