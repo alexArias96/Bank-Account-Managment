@@ -1,6 +1,10 @@
 import java.util.Scanner;
-
+import java.util.Optional;
 public class Menu {
+    private static LoanService loanService;
+    public Menu(LoanService loanService) {
+        Menu.loanService = loanService;
+    }
 
     public static void action(int option) {
         Scanner entrada = new Scanner(System.in);
@@ -41,10 +45,17 @@ public class Menu {
                 System.out.println("Solicitar Prestamo:\n");
                 break;
             case 6:
-                System.out.println("Ingrese numero del prestamos:\n");
-                optionMenu = entrada.nextInt();
+                System.out.println("Ingrese numero del prestamo:\n");
+                int loanId = entrada.nextInt();
                 System.out.println("Ingrese la cantidad a pagar:\n");
-                amount = entrada.nextDouble();
+                double paymentAmount = entrada.nextDouble();
+
+                Optional<Loan> loanOptional = loanService.makePayment(loanId, paymentAmount);
+                if (loanOptional.isPresent()) {
+                    System.out.println("Pago realizado exitosamente.");
+                } else {
+                    System.out.println("No se encontró el préstamo con el ID especificado.");
+                }
                 break;
             case 7:
                 System.out.println("Solicitar tarjeta de credito:\n");
