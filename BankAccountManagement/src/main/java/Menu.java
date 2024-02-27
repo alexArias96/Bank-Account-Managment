@@ -18,6 +18,11 @@ public class Menu {
             case 2:
                 System.out.println("Ingrese el numero de cuenta:\n");
                 optionMenu = entrada.nextInt();
+
+                Saldo saldo = new Saldo();
+                System.out.println("Su saldo es:\n");
+                saldo.getSaldo();
+                break;
             case 3:
                 System.out.println("Ingrese el numero de cuenta:\n");
                 optionMenu = entrada.nextInt();
