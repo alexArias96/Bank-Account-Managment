@@ -2,19 +2,40 @@ import java.util.Date;
 
 public class Loan {
     // Atributos
+    private int idLoan;
     private String currencyType;
     private double amount;
     private Date startDate;
     private Date endDate;
 
     // Constructor
-    public Loan(String currencyType, double amount, Date startDate, Date endDate) {
+    public Loan(int idLoan, String currencyType, double amount, Date startDate, Date endDate) {
+        this.idLoan = idLoan;
         this.currencyType = currencyType;
         this.amount = amount;
         this.startDate = startDate;
         this.endDate = endDate;
     }
+    public double makePayment(double paymentAmount) {
 
+        if (paymentAmount <= 0) {
+            throw new IllegalArgumentException("Monto a ingresar invalido");
+        }
+
+
+        double newAmount = amount - paymentAmount;
+
+
+        if (newAmount < 0) {
+            throw new IllegalArgumentException("El monto a abonar debe ser menor al del total del préstamo");
+        }
+
+        // Update the loan amount
+        this.amount = newAmount;
+
+        // Return the new loan amount
+        return newAmount;
+    }
     // Getters y Setters
     public String getCurrencyType() {
         return currencyType;
@@ -42,6 +63,14 @@ public class Loan {
 
     public Date getEndDate() {
         return endDate;
+    }
+
+    public int getIdPrestamo() {
+        return idLoan;
+    }
+
+    public void setIdPrestamo(int idLoan) {
+        this.idLoan = idLoan;
     }
 
     public void setEndDate(Date endDate) {
