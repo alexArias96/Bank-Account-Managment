@@ -65,11 +65,11 @@ public class Loan {
         return endDate;
     }
 
-    public int getIdPrestamo() {
+    public int getIdLoan() {
         return idLoan;
     }
 
-    public void setIdPrestamo(int idLoan) {
+    public void setIdLoan(int idLoan) {
         this.idLoan = idLoan;
     }
 
